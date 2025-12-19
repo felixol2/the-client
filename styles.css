@@ -3,6 +3,8 @@
 
 body{
     background-image: url(images/1x/waves.png);
+    background-size: cover;
+
 }
 img{
   max-width:100%;
@@ -11,7 +13,7 @@ img{
 }
 
 nav{
-  width: min(var(1100), calc(100% - 40px));
+  width: min((1100px), calc(100% - 40px));
   margin: 14px auto 0;
   padding: 10px 12px;
   background: #7fa3ac;
@@ -58,23 +60,15 @@ header h1{
 header h2{
   margin:0;
   font-family: "Bungee", sans-serif;
-  font-size: clamp(18px, 2.3vw, 28px);
   background: lightseagreen;
   padding: 10px 14px;
   justify-self:end;
 }
 
 main{
-  width: min(var(1100), calc(100% - 40px));
+  width: min((1100px), calc(100% - 40px));
   margin: 0 auto 60px;
 }
-
-main section,
-main figure,
-main .donors > div{
-  background: rgba(255,255,255,0);
-}
-
 
 main h2{
   font-family: "Bungee", sans-serif;
@@ -162,8 +156,6 @@ main{
   width: 110px;
   height: 110px;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 6px 0 rgba(0,0,0,.2);
 }
 
 .donors p{
@@ -251,7 +243,6 @@ main img[alt="map"]{
 
 .owner img, .conservation img, .staff img{
   margin-top: 10px;
-  box-shadow: 0 8px 0 rgba(0,0,0,.22);
 }
 
 @media (min-width: 950px){
@@ -296,5 +287,11 @@ main img[alt="map"]{
     width: 90px;
     height: 90px;
   }
+}
+.donors{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: lightseagreen;
+  padding: 14px 16px;
 }
 
